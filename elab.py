@@ -1,5 +1,6 @@
 from docx import Document
 from docx.shared import Inches
+import glob
 
 document = Document()
 
@@ -10,12 +11,16 @@ for section in sections:
 	section.left_margin = Inches(1)
 	section.right_margin = Inches(1)
 
-for i in range(0,68):
-	if (i==0):
-		picture='report.png'
-	else:
-		picture='report ('+str(i)+').png'
-	document.add_picture(picture,width=Inches(7),height=Inches(7))
+#/create array containing names of all .png files in current directory
+pictures = glob.glob('./*.png')
+
+for picture in pictures:
+	#parse file name (remove ./)
+	pic = picture[2:]
+	try:
+		document.add_picture(pic,width=Inches(7),height=Inches(7))
+	except:
+		print('Picture Name: '+pic+' could not be processed')
 
 filename=input("Enter the final filename...\n")
 filename=filename+'.docx'
