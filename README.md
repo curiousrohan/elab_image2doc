@@ -1,4 +1,8 @@
 # elab_image2doc
+
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/curiousrohan/elab_image2doc/?ref=repository-badge)
+
+
 - Install python3 from https://www.python.org/  [Make sure to add python to the path when installing] 
 - Install python-docx by going to the Command Prompt/Terminal and execute "pip install python-docx" [Ignore the " "] 
 - Download the elab.py file from this repository and place it in the directory where you have saved the .png files. 
@@ -8,3 +12,4 @@
 - [Optional] You can change margins and picture size as per your requirement in the .py file.
 
 If you have any problems or queries, raise an issue in this repository or contact me personally.
+
